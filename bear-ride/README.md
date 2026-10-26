@@ -1,4 +1,4 @@
-# 小熊慢骑 / Bear Ride
+# 小熊骑行 / Bear Ride
 
 A buildless Phaser 3.90 game for GitHub Pages. Open `/bear-ride/` over HTTP. No backend, install, CDN or build step is required.
 

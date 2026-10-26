@@ -19,3 +19,14 @@ export function terrainY(worldX,base,layer) {
  const phase=worldX*.006;
  return base-Math.sin(phase)*42-Math.sin(phase*1.7+2)*28-(layer?0:45);
 }
+
+// Once attracted, a flower follows the rider until arrival, even if the magnet expires.
+export function advanceAttractedFlower(flower,target,dt) {
+ flower.trail ??= [];
+ flower.trail.push({x:flower.x,y:flower.y-13});
+ if(flower.trail.length>6)flower.trail.shift();
+ const blend=1-Math.exp(-10*dt);
+ flower.x+=(target.x-flower.x)*blend;
+ flower.y+=(target.y+13-flower.y)*blend;
+ return Math.hypot(target.x-flower.x,target.y-(flower.y-13))<12;
+}
