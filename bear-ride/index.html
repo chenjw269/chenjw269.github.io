@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#e6eee3"><meta name="description" content="和小熊一起，骑过山川湖海。一款可以慢慢看风景的轻量跑酷小游戏。"><title>小熊慢骑 · Bear Ride</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="game" aria-label="小熊慢骑游戏画面"></main>
+<div id="loading">小熊正在整理行李…</div>
+<header id="hud" hidden><div class="hud-left"><span id="route-name"></span><strong id="distance">0 m</strong><span id="flowers">✿ 0</span></div><button id="pause" aria-label="暂停游戏">Ⅱ</button><div class="progress"><i id="progress"></i></div><div id="effects" aria-live="polite"></div></header>
+<section id="panel" class="overlay"><div class="sheet"><div class="eyebrow">A LITTLE RIDE, A LITTLE WONDER</div><h1>小熊慢骑<span>把日子，骑成风景。</span></h1><p class="intro">不赶路的时候，风景刚刚好。<br>和小熊一起，去下一个转弯。</p><div class="modes" role="group" aria-label="游戏模式"><button data-mode="run" class="active">沿途冒险<small>跳过障碍 · 收集小花</small></button><button data-mode="scenic">自在观景<small>没有失败 · 一直向前</small></button></div><div class="section-label">选择一段旅途 <span id="wallet"></span></div><div id="routes" class="routes"></div><div class="section-label">今天，和谁出发？</div><div id="characters" class="characters"></div><button id="start" class="primary">出发，让风吹一会儿 <span>↗</span></button><p class="help">空格 / ↑ / 点击画面跳跃 · P 暂停<br>道具：护盾挡一次碰撞 · 磁铁吸花 · 顺风加速<br>进度保存在当前浏览器，观景也能收集小花。</p><a class="home-link" href="/">← 返回主页</a></div></section>
+<section id="dialog" class="overlay" hidden><div class="modal"><div class="eyebrow" id="dialog-tag"></div><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button id="continue" class="primary"></button><button id="back" class="secondary">回到旅途地图</button></div></section>
+<button id="jump" hidden aria-label="跳跃">↑<small>跳一下</small></button><div id="toast" role="status"></div>
+<script src="vendor/phaser.min.js"></script><script type="module" src="game.js"></script>
+</body></html>
